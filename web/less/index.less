@@ -1,3 +1,4 @@
+// 顶部导航
 .nav{
     width: 100%;
     height: 60px;
@@ -9,6 +10,9 @@
         line-height: 60px;
         // background-color: pink;
     }
+    ul{
+        margin-bottom: 0;
+    }
     a{
         color: #fff;
         text-decoration: none;
@@ -17,3 +21,133 @@
         }
     }
 }
+// 广告区域
+.banner{
+    width: 100%;
+    position: relative;
+    img{
+        width: 100%;
+    }
+    .btns{
+        position: absolute;
+        left: 50%;
+        bottom: 30px;
+        transform: translate(-50%);
+        span{
+            display: block;
+            width: 100px;
+            height: 10px;
+            background-color: orange;
+            float: left;
+            &:nth-child(2) {
+                margin:0 10px;
+            }
+            &:hover{
+                background-color: #fff;
+                cursor: pointer;
+            }
+        }
+    }
+}
+// 主体内容区域
+.main_content{
+    width: 1200px;
+    height: 300px;
+    margin: 0 auto;
+    .title{
+        h4{
+            font-size: 40px;
+            margin: 0;
+        }
+        p{
+            font-size: 14px;
+            margin: 0;
+        }
+    }
+    // 内容图片区域
+    .content{
+        width: 100%;
+        height: 180px;
+        background-color: pink;
+        .item{
+            height: 180px;
+            background-color: #70c3ff;
+            border-right: 2px solid #fff;
+            text-align: center;
+            img{
+                height: 60px;
+                margin:  30px 0 ;
+            }
+            &:nth-child(2){
+                background-color: #fd6a7f;
+            }
+            &:nth-child(3){
+                background-color: #7f8ea0;
+            }
+            &:nth-child(4){
+                background-color: #89d04f;
+                border: none;
+            }
+
+        }
+    }
+
+}
+//媒体查询 移动端
+@media only screen and (max-width:767px) {
+    // 广告区域
+    .banner{
+        .btns{
+            bottom: 5px;
+            span{
+                width:40px;
+                height:5px;
+            }
+        }
+        
+    }
+    // 主体内容区域
+.main_content{
+    width: 100%;
+    .title{
+        h4{
+            font-size: 30px;
+
+        }
+    }
+    .content{
+        .item{
+            border-right:0 none;
+        }
+    }
+}
+
+}
+//媒体查询 ipad端
+@media only screen and (min-width:768px) and (max-width:991px) {
+    // 广告区域
+    .banner{
+        .btns{
+            bottom: 10px;
+        }
+    }
+       // 主体内容区域
+.main_content{
+    width: 100%;
+    .title{
+        h4{
+            font-size: 30px;
+        }
+    }
+    .content{
+        .item{
+            border-bottom: 5px solid #fff;
+            &:last-child{
+                border-right:2px solid #fff;
+            }
+        }
+    }
+}
+}
+
+
